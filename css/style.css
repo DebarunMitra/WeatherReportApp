@@ -87,6 +87,7 @@ objective: Update the user with current weather according to there location
   font-family: 'Cutive', serif;
   font-size: 100%;
   /*color: blue;*/
+  cursor:pointer;
 }
 .fahrenhite
 {
@@ -98,6 +99,7 @@ objective: Update the user with current weather according to there location
   /*font-family: 'Michroma', sans-serif;*/
   font-family: 'Cutive', serif;
   font-size: 100%;
+  cursor:pointer;
 }
 .div-bar
 {
