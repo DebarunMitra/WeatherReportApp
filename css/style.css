@@ -1,0 +1,170 @@
+/*
+author:Debarun Mitra
+application name:Weather Report application
+objective: Update the user with current weather according to there location
+*/
+.color-part
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background-color: #0080ff;
+}
+.weather
+{
+    position: fixed;
+    top:40%;
+    left:10%;
+    font-style: normal;
+    font-family: 'Cutive', serif;
+    font-size: 250%;
+    color:black;
+}
+.app
+{
+    position: fixed;
+    top:40%;
+    left:25%;
+    font-style: normal;
+    font-family: 'Cutive', serif;
+    font-size: 250%;
+    color:white;
+}
+.city-name
+{
+  position: fixed;
+  top:20%;
+  left:57%;
+  font-style: normal;
+  /*font-family: cursive;*/
+  /*font-family: 'Michroma', sans-serif;*/
+  font-family: 'Cutive', serif;
+  font-size: 180%;
+}
+.day-time
+{
+  position: absolute;
+  top:29%;
+  left:57%;
+  font-style: normal;
+  /*font-family: cursive;*/
+  /*font-family: 'Michroma', sans-serif;*/
+  font-family: 'Cutive', serif;
+  font-size: 100%;
+}
+.weather-status
+{
+  position: absolute;
+  top:34%;
+  left:57%;
+  font-style: normal;
+  /*font-family: cursive;*/
+  /*font-family: 'Michroma', sans-serif;*/
+  font-family: 'Cutive', serif;
+  font-size: 80%;
+}
+.temp-count
+{
+  position: absolute;
+  top:38%;
+  left:57%;
+  font-style: normal;
+  /*font-family: cursive;*/
+  /*font-family: 'Michroma', sans-serif;*/
+  font-family: 'Cutive', serif;
+  font-size: 180%;
+}
+.celcius
+{
+  position: absolute;
+  top:40%;
+  left:60%;
+  font-style: normal;
+  /*font-family: cursive;*/
+  /*font-family: 'Michroma', sans-serif;*/
+  font-family: 'Cutive', serif;
+  font-size: 100%;
+  /*color: blue;*/
+}
+.fahrenhite
+{
+  position: absolute;
+  top:40%;
+  left:63%;
+  font-style: normal;
+  /*font-family: cursive;*/
+  /*font-family: 'Michroma', sans-serif;*/
+  font-family: 'Cutive', serif;
+  font-size: 100%;
+}
+.div-bar
+{
+  position: absolute;
+  top:40%;
+  left:62%;
+  font-style: normal;
+  /*font-family: cursive;*/
+  /*font-family: 'Michroma', sans-serif;*/
+  font-family: 'Cutive', serif;
+  font-size: 100%;
+}
+.input-div
+{
+  position: absolute;
+  top:55%;
+  left:57%;
+}
+.input-head
+{
+  width:100%;
+  font-family: 'Cutive', serif;
+  font-size: 80%;
+  margin: 1px auto;
+}
+.text-box
+{
+  position: absolute;
+  height: 20px;
+  width:383px;
+  border-radius: 3px;
+  background: white;
+  font-size: 16px;
+  overflow: hidden;
+}
+.suggest
+{
+  position: fixed;
+  background: white;
+  width: 385px;
+  border: 0px;
+  margin: 24px auto;
+}
+.suggest > div
+{
+  padding: 2px;
+  font-weight: 2px;
+  font-size: 15px;
+  border-top: 1px solid;
+  cursor:pointer;
+}
+.suggest > div:hover
+{
+  background-color: #1E90FF;
+}
+.today-weather
+{
+  position: absolute;
+  top:36%;
+  left:68%;
+  width: 3%;
+  height: 4%;
+
+}
+.end-box
+{
+position: absolute;
+top:0%;
+left: 250%;
+}

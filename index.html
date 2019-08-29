@@ -1,0 +1,49 @@
+<!--
+author:Debarun Mitra
+application name:Weather Report application
+objective: Update the user with current weather according to there location
+-->
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>WeatherApp</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Cutive&display=swap" rel="stylesheet">
+  </head>
+  <body>
+  <div class="color-part">
+    <p class=weather>Weather</p>
+        <p class=app>App</p>
+  </div>
+  <!--main weather div-->
+  <div class="">
+  <div class="">
+  </div>
+  <div class="content-area">
+    <p id="city_name" class="city-name"></p>
+    <p id="day_time" class="day-time"></p>
+    <p id="report" class="weather-status">Thunder Storm, </p>
+    <div class=""></div>
+  </div>
+  <div class="">
+      <p id="temp" class="temp-count"></p>
+      <div class="">
+        <p id="cel" class="celcius" style="color:blue;" onclick="temparatureConverter(1)"><b>&#8451;</b></p>
+        <p  class="div-bar">|</p>
+        <p id="fahr" class="fahrenhite" style="color:black;" onclick="temparatureConverter(2)"><b>&#8457;</b></p>
+        <img id="weatherImg" class="today-weather" src="./images/thunder_storm.png" alt="thunder storm">
+        <div class="bar"></div>
+      </div>
+  </div>
+  <div class="input-div">
+    <p class="input-head">Enter Your City</p>
+        <input type="text" id="input_search" class="text-box" name="text" value="" placeholder="Type Your City Name">
+    <input type="hidden" id="inputChecker" class="end-box">
+    <div id="suggestedVal" class="suggest">
+    </div>
+  </div>
+  </div>
+  </body>
+  <script src="js/script.js"></script>
+</html>
