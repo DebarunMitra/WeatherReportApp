@@ -3,7 +3,7 @@ author:Debarun Mitra
 application name:Weather Report application
 objective: Update the user with current weather according to there location
 */
-.color-part
+.colorPart
 {
     position: fixed;
     top: 0;
@@ -32,7 +32,7 @@ objective: Update the user with current weather according to there location
     font-size: 250%;
     color:white;
 }
-.city-name
+.cityName
 {
   position: fixed;
   top:20%;
@@ -43,7 +43,7 @@ objective: Update the user with current weather according to there location
   font-family: 'Cutive', serif;
   font-size: 180%;
 }
-.day-time
+.dayTime
 {
   position: absolute;
   top:29%;
@@ -54,7 +54,7 @@ objective: Update the user with current weather according to there location
   font-family: 'Cutive', serif;
   font-size: 100%;
 }
-.weather-status
+.weatherStatus
 {
   position: absolute;
   top:34%;
@@ -65,7 +65,7 @@ objective: Update the user with current weather according to there location
   font-family: 'Cutive', serif;
   font-size: 80%;
 }
-.temp-count
+.tempCount
 {
   position: absolute;
   top:38%;
@@ -101,7 +101,7 @@ objective: Update the user with current weather according to there location
   font-size: 100%;
   cursor:pointer;
 }
-.div-bar
+.divBar
 {
   position: absolute;
   top:40%;
@@ -112,20 +112,20 @@ objective: Update the user with current weather according to there location
   font-family: 'Cutive', serif;
   font-size: 100%;
 }
-.input-div
+.inputDiv
 {
   position: absolute;
   top:55%;
   left:57%;
 }
-.input-head
+.inputHead
 {
   width:100%;
   font-family: 'Cutive', serif;
   font-size: 80%;
   margin: 1px auto;
 }
-.text-box
+.textBox
 {
   position: absolute;
   height: 20px;
@@ -155,7 +155,7 @@ objective: Update the user with current weather according to there location
 {
   background-color: #1E90FF;
 }
-.today-weather
+.todayWeather
 {
   position: absolute;
   top:36%;
@@ -164,7 +164,7 @@ objective: Update the user with current weather according to there location
   height: 4%;
 
 }
-.end-box
+.endBox
 {
 position: absolute;
 top:0%;

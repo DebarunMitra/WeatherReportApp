@@ -12,7 +12,7 @@ objective: Update the user with current weather according to there location
     <link href="https://fonts.googleapis.com/css?family=Cutive&display=swap" rel="stylesheet">
   </head>
   <body>
-  <div class="color-part">
+  <div class="colorPart">
     <p class=weather>Weather</p>
         <p class=app>App</p>
   </div>
@@ -20,26 +20,26 @@ objective: Update the user with current weather according to there location
   <div class="">
   <div class="">
   </div>
-  <div class="content-area">
-    <p id="city_name" class="city-name"></p>
-    <p id="day_time" class="day-time"></p>
-    <p id="report" class="weather-status">Thunder Storm, </p>
+  <div class="contentArea">
+    <p id="cityName" class="cityName"></p>
+    <p id="dayTime" class="dayTime"></p>
+    <p id="report" class="weatherStatus"></p>
     <div class=""></div>
   </div>
   <div class="">
-      <p id="temp" class="temp-count"></p>
+      <p id="temp" class="tempCount"></p>
       <div class="">
         <p id="cel" class="celcius" style="color:blue;" onclick="temparatureConverter(1)"><b>&#8451;</b></p>
-        <p  class="div-bar">|</p>
+        <p  class="divBar">|</p>
         <p id="fahr" class="fahrenhite" style="color:black;" onclick="temparatureConverter(2)"><b>&#8457;</b></p>
-        <img id="weatherImg" class="today-weather" src="./images/thunder_storm.png" alt="thunder storm">
+        <img id="weatherImg" class="todayWeather" src="./images/thunder_storm.png" alt="thunder storm">
         <div class="bar"></div>
       </div>
   </div>
-  <div class="input-div">
-    <p class="input-head">Enter Your City</p>
-        <input type="text" id="input_search" class="text-box" name="text" value="" placeholder="Type Your City Name">
-    <input type="hidden" id="inputChecker" class="end-box">
+  <div class="inputDiv">
+    <p class="inputHead">Enter Your City</p>
+        <input type="text" id="inputSearch" class="textBox" name="text" value="" placeholder="Type Your City Name">
+    <input type="hidden" id="inputChecker" class="endBox">
     <div id="suggestedVal" class="suggest">
     </div>
   </div>

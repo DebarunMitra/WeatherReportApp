@@ -73,8 +73,8 @@ const city=[
   {name:'Coimbatore',state:'Tamil Nadu',temp:25,weather:'./images/sunny-cloudy.png',report:'Sunny Cloudy'}
 ];
 
-document.getElementById('city_name').innerHTML=city[0].name+", "+city[0].state;
-document.getElementById('day_time').innerHTML=days[day]+", "+time;
+document.getElementById('cityName').innerHTML=city[0].name+", "+city[0].state;
+document.getElementById('dayTime').innerHTML=days[day]+", "+time;
 document.getElementById('temp').innerHTML=city[0].temp;
 document.getElementById('inputChecker').value=1;
 document.getElementById('report').innerHTML=city[0].report;
@@ -109,9 +109,9 @@ function temparatureConverter(value)
 /*Calculate Temparature end*/
 
 /*autocomplete start*/
-const searchInput=document.getElementById('input_search');
+const searchInput=document.getElementById('inputSearch');
 const suggVal=document.getElementById('suggestedVal');
-const cityAndState=document.getElementById('city_name');
+const cityAndState=document.getElementById('cityNname');
 searchInput.addEventListener('keyup',function(){
   const value=searchInput.value;
   suggVal.innerHTML='';
@@ -125,7 +125,7 @@ searchInput.addEventListener('keyup',function(){
     div.addEventListener('click',function(){
       //alert(suggested.name+", "+suggested.state);
       searchInput.value=suggested.name+", "+suggested.state;
-      document.getElementById('city_name').innerHTML=suggested.name+", "+suggested.state;
+      document.getElementById('cityName').innerHTML=suggested.name+", "+suggested.state;
       document.getElementById('temp').innerHTML=suggested.temp;
       document.getElementById('weatherImg').src=suggested.weather;
       document.getElementById('cel').style.color='blue';
