@@ -12,25 +12,25 @@ objective: Update the user with current weather according to there location
     height: 100%;
     background-color: #0080ff;
 }
-.weather
+.weatherClass
 {
     position: fixed;
     top:40%;
     left:10%;
     font-style: normal;
-    font-family: 'Cutive', serif;
-    font-size: 250%;
-    color:black;
+    font-family: sans-serif;
+    font-size: 300%;
+    color:#FFFFFF;
 }
-.app
+.appClass
 {
     position: fixed;
     top:40%;
     left:25%;
     font-style: normal;
-    font-family: 'Cutive', serif;
-    font-size: 250%;
-    color:white;
+    font-family: sans-serif;
+    font-size: 300%;
+    color:#000000;
 }
 .cityName
 {
@@ -38,9 +38,7 @@ objective: Update the user with current weather according to there location
   top:20%;
   left:57%;
   font-style: normal;
-  /*font-family: cursive;*/
-  /*font-family: 'Michroma', sans-serif;*/
-  font-family: 'Cutive', serif;
+  font-family: sans-serif;
   font-size: 180%;
 }
 .dayTime
@@ -49,55 +47,45 @@ objective: Update the user with current weather according to there location
   top:29%;
   left:57%;
   font-style: normal;
-  /*font-family: cursive;*/
-  /*font-family: 'Michroma', sans-serif;*/
-  font-family: 'Cutive', serif;
+  font-family: sans-serif;
   font-size: 100%;
 }
 .weatherStatus
 {
   position: absolute;
-  top:34%;
+  top:33%;
   left:57%;
   font-style: normal;
-  /*font-family: cursive;*/
-  /*font-family: 'Michroma', sans-serif;*/
-  font-family: 'Cutive', serif;
-  font-size: 80%;
+  font-family: sans-serif;
+  font-size: 100%;
 }
 .tempCount
 {
   position: absolute;
-  top:38%;
+  top:36%;
   left:57%;
   font-style: normal;
-  /*font-family: cursive;*/
-  /*font-family: 'Michroma', sans-serif;*/
-  font-family: 'Cutive', serif;
-  font-size: 180%;
+  font-family: sans-serif;
+  font-weight: bolder;
+  font-size: 260%;
 }
-.celcius
+.celciusClass
 {
   position: absolute;
   top:40%;
-  left:60%;
+  left:61%;
   font-style: normal;
-  /*font-family: cursive;*/
-  /*font-family: 'Michroma', sans-serif;*/
-  font-family: 'Cutive', serif;
+  font-family: sans-serif;
   font-size: 100%;
-  /*color: blue;*/
   cursor:pointer;
 }
-.fahrenhite
+.fahrenhiteClass
 {
   position: absolute;
   top:40%;
-  left:63%;
+  left:64%;
   font-style: normal;
-  /*font-family: cursive;*/
-  /*font-family: 'Michroma', sans-serif;*/
-  font-family: 'Cutive', serif;
+  font-family: sans-serif;
   font-size: 100%;
   cursor:pointer;
 }
@@ -105,11 +93,9 @@ objective: Update the user with current weather according to there location
 {
   position: absolute;
   top:40%;
-  left:62%;
+  left:63%;
   font-style: normal;
-  /*font-family: cursive;*/
-  /*font-family: 'Michroma', sans-serif;*/
-  font-family: 'Cutive', serif;
+  font-family: sans-serif;
   font-size: 100%;
 }
 .inputDiv
@@ -121,7 +107,7 @@ objective: Update the user with current weather according to there location
 .inputHead
 {
   width:100%;
-  font-family: 'Cutive', serif;
+  font-family: sans-serif;
   font-size: 80%;
   margin: 1px auto;
 }
@@ -135,7 +121,7 @@ objective: Update the user with current weather according to there location
   font-size: 16px;
   overflow: hidden;
 }
-.suggest
+.suggestVal
 {
   position: fixed;
   background: white;
@@ -143,7 +129,7 @@ objective: Update the user with current weather according to there location
   border: 0px;
   margin: 24px auto;
 }
-.suggest > div
+.suggestVal > div
 {
   padding: 2px;
   font-weight: 2px;
@@ -151,15 +137,15 @@ objective: Update the user with current weather according to there location
   border-top: 1px solid;
   cursor:pointer;
 }
-.suggest > div:hover
+.suggestVal > div:hover
 {
   background-color: #1E90FF;
 }
 .todayWeather
 {
   position: absolute;
-  top:36%;
-  left:68%;
+  top:35%;
+  left:66%;
   width: 3%;
   height: 4%;
 

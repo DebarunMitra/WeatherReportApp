@@ -9,41 +9,42 @@ objective: Update the user with current weather according to there location
     <meta charset="utf-8">
     <title>WeatherApp</title>
     <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css?family=Cutive&display=swap" rel="stylesheet">
   </head>
   <body>
+  <!--app cover start-->
   <div class="colorPart">
-    <p class=weather>Weather</p>
-        <p class=app>App</p>
+    <p class=weatherClass><b>Weather</b></p>
+        <p class=appClass><b>App</b></p>
   </div>
-  <!--main weather div-->
-  <div class="">
-  <div class="">
+    <!--app cover stop-->
+  <!--main weather div start-->
+  <div>
+  <div>
   </div>
   <div class="contentArea">
     <p id="cityName" class="cityName"></p>
     <p id="dayTime" class="dayTime"></p>
     <p id="report" class="weatherStatus"></p>
-    <div class=""></div>
   </div>
-  <div class="">
+  <div>
       <p id="temp" class="tempCount"></p>
       <div class="">
-        <p id="cel" class="celcius" style="color:blue;" onclick="temparatureConverter(1)"><b>&#8451;</b></p>
+        <b><p id="cel" class="celciusClass" style="color:#1E90FF;">℃</p></b>
         <p  class="divBar">|</p>
-        <p id="fahr" class="fahrenhite" style="color:black;" onclick="temparatureConverter(2)"><b>&#8457;</b></p>
+        <b><p id="fahr" class="fahrenhiteClass" style="color:#000000;">℉</p></b>
         <img id="weatherImg" class="todayWeather" src="./images/thunder_storm.png" alt="thunder storm">
         <div class="bar"></div>
       </div>
   </div>
   <div class="inputDiv">
-    <p class="inputHead">Enter Your City</p>
+    <p class="inputHead"><b>Enter Your City</b></p>
         <input type="text" id="inputSearch" class="textBox" name="text" value="" placeholder="Type Your City Name">
     <input type="hidden" id="inputChecker" class="endBox">
-    <div id="suggestedVal" class="suggest">
+    <div id="suggestedVal" class="suggestVal">
     </div>
   </div>
   </div>
+    <!--main weather div stop-->
   </body>
   <script src="js/script.js"></script>
 </html>
