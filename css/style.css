@@ -2,6 +2,7 @@
 author:Debarun Mitra
 application name:Weather Report application
 objective: Update the user with current weather according to there location
+file description: CSS file of Weathrt Application
 */
 .colorPart
 {
@@ -35,7 +36,7 @@ objective: Update the user with current weather according to there location
 .cityName
 {
   position: fixed;
-  top:20%;
+  top:14%;
   left:57%;
   font-style: normal;
   font-family: sans-serif;
@@ -44,7 +45,7 @@ objective: Update the user with current weather according to there location
 .dayTime
 {
   position: absolute;
-  top:29%;
+  top:23%;
   left:57%;
   font-style: normal;
   font-family: sans-serif;
@@ -53,7 +54,7 @@ objective: Update the user with current weather according to there location
 .weatherStatus
 {
   position: absolute;
-  top:33%;
+  top:27%;
   left:57%;
   font-style: normal;
   font-family: sans-serif;
@@ -62,7 +63,7 @@ objective: Update the user with current weather according to there location
 .tempCount
 {
   position: absolute;
-  top:36%;
+  top:30%;
   left:57%;
   font-style: normal;
   font-family: sans-serif;
@@ -72,7 +73,7 @@ objective: Update the user with current weather according to there location
 .celciusClass
 {
   position: absolute;
-  top:40%;
+  top:34%;
   left:61%;
   font-style: normal;
   font-family: sans-serif;
@@ -82,7 +83,7 @@ objective: Update the user with current weather according to there location
 .fahrenhiteClass
 {
   position: absolute;
-  top:40%;
+  top:34%;
   left:64%;
   font-style: normal;
   font-family: sans-serif;
@@ -92,7 +93,7 @@ objective: Update the user with current weather according to there location
 .divBar
 {
   position: absolute;
-  top:40%;
+  top:34%;
   left:63%;
   font-style: normal;
   font-family: sans-serif;
@@ -101,7 +102,7 @@ objective: Update the user with current weather according to there location
 .inputDiv
 {
   position: absolute;
-  top:55%;
+  top:56%;
   left:57%;
 }
 .inputHead
@@ -144,7 +145,7 @@ objective: Update the user with current weather according to there location
 .todayWeather
 {
   position: absolute;
-  top:35%;
+  top:29%;
   left:66%;
   width: 3%;
   height: 4%;

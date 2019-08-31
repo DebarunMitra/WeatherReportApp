@@ -2,6 +2,7 @@
 author:Debarun Mitra
 application name:Weather Report application
 objective: Update the user with current weather according to there location
+file description: JavaScript file of Weathrt Application
 */
 class Weather
 {
@@ -78,27 +79,27 @@ Weather.prototype.getCityState=function(){
 (value=='')?suggVal.innerHTML='':false;
 }
 const city=[
-  {name:'Kolkata',state:'West Bengal',temp:30,weather:'./images/thunder_storm.png',report:'Thunder Storm'},
+  {name:'Kolkata',state:'West Bengal',temp:30,weather:'./images/thunderStorm.png',report:'Thunder Storm'},
   {name:'Bengaluru',state:'Karnataka',temp:22,weather:'./images/clouds.png',report:'Partly Cloudy'},
-  {name:'Hyderabad',state:'Andhra Pradesh',temp:25,weather:'./images/clouds.png',report:'Partly Cloudy'},
+  {name:'Hyderabad',state:'Andhra Pradesh',temp:25,weather:'./images/cloudsLeter.png',report:'Dark Cloudy'},
   {name:'Itanagar',state:'Arunachal Pradesh',temp:20,weather:'./images/storm.png',report:'Heavy Storm'},
   {name:'Dispur',state:'Assam',temp:20,weather:'./images/clouds.png',report:'Partly Clouds'},
   {name:'Patna',state:'Bihar',temp:35,weather:'./images/sunny.png',report:'Sunny'},
-  {name:'Panaji',state:'Goa',temp:28,weather:'./images/rain.png',report:'Rain'},
-  {name:'Gandhinagar',state:'Gujarat',temp:35,weather:'./images/sunny-cloudy.png',report:'Sunny Cloudy'},
-  {name:'Haryana',state:'Chandigarh',temp:30,weather:'./images/thunder_storm.png',report:'Thunder Storm'},
-  {name:'Shimla',state:'Himachal Pradesh',temp:15,weather:'./images/cold.jpg',report:'Cold'},
-  {name:'Ranchi',state:'Jharkhand',temp:32,weather:'./images/thunder_storm.png',report:'Thunder Storm'},
-  {name:'Thiruvananthapuram',state:'Kerala',temp:25,weather:'./images/rain.png',report:'Rain'},
-  {name:'Bhopal',state:'Madhya Pradesh',temp:30,weather:'./images/thunder_storm.png',report:'Thunder Storm'},
+  {name:'Panaji',state:'Goa',temp:28,weather:'./images/rain.png',report:'Heavy Rain'},
+  {name:'Gandhinagar',state:'Gujarat',temp:35,weather:'./images/sunnyCloudy.png',report:'Sunny Cloudy'},
+  {name:'Haryana',state:'Chandigarh',temp:30,weather:'./images/thunderStorm.png',report:'Thunder Storm'},
+  {name:'Shimla',state:'Himachal Pradesh',temp:10,weather:'./images/cold.jpg',report:'Heavy Cold'},
+  {name:'Ranchi',state:'Jharkhand',temp:32,weather:'./images/thunderStorm.png',report:'Thunder Storm'},
+  {name:'Thiruvananthapuram',state:'Kerala',temp:25,weather:'./images/rain.png',report:'Heavy Rain'},
+  {name:'	Bhopal',state:'Madhya Pradesh',temp:30,weather:'./images/thunderStorm.png',report:'Thunder Storm'},
   {name:'Mumbai',state:'Maharashtra',temp:36,weather:'./images/sunny.png',report:'Sunny'},
   {name:'Bhubaneswar',state:'Odisha',temp:28,weather:'./images/clouds.png',report:'Partly Cloudy'},
   {name:'Jaipur',state:'Rajasthan',temp:38,weather:'./images/sunny.png',report:'Sunny'},
-  {name:'Chennai',state:'Tamil Nadu',temp:32,weather:'./images/sunny-cloudy.png',report:'Sunny Cloudy'},
-  {name:'Aizawl',state:'Mizoram',temp:25,weather:'./images/thunder_storm.png',report:'Thunder Storm'},
+  {name:'Chennai',state:'Tamil Nadu',temp:32,weather:'./images/sunnyCloudy.png',report:'Sunny Cloudy'},
+  {name:'Aizawl',state:'Mizoram',temp:25,weather:'./images/thunderStorm.png',report:'Thunder Storm'},
   {name:'Delhi',state:'Delhi',temp:28,weather:'./images/sunny.png',report:'Sunny'},
-  {name:'Chandigarh',state:'Chandigarh',temp:25,weather:'./images/thunder_storm.png',report:'Thunder Storm'},
-  {name:'Coimbatore',state:'Tamil Nadu',temp:25,weather:'./images/sunny-cloudy.png',report:'Sunny Cloudy'}
+  {name:'Chandigarh',state:'Chandigarh',temp:25,weather:'./images/thunderStorm.png',report:'Thunder Storm'},
+  {name:'Coimbatore',state:'Tamil Nadu',temp:25,weather:'./images/sunnyCloudy.png',report:'Sunny Cloudy'}
 ];
 let dayTime=new Date();
 const weatherObj=new Weather();
