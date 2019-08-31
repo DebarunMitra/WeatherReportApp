@@ -57,9 +57,9 @@ Weather.prototype.getCityState=function(){
   const cityAndState=document.getElementById('cityNname');
   const value=searchInput.value;
   suggVal.innerHTML='';
-  const suggestValue=city.filter(function(cities){
-    return cities.name.toLowerCase().startsWith(value);
- });
+ const suggestValue=city.filter((cities)=>
+     cities.name.toLowerCase().startsWith(value)
+ );
  suggestValue.forEach(function(suggested){
    const div=document.createElement('div');
    div.innerHTML=suggested.name+", "+suggested.state;
