@@ -8,4 +8,4 @@ HTML,CSS,JavaScript
 ## Objective: 
 A weather application to show the user current weather report of selected city .
 ## Visit:
-[title](https://debarunmitra.github.io/WeatherReportApp/)
+[WeatherApplication](https://debarunmitra.github.io/WeatherReportApp/)
