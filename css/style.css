@@ -354,8 +354,8 @@ left: 250%;
 }
 @media only screen and (max-width:500px) {
     .colorPart{
-        width: 80%;
-        height: 200%;
+        width: 100%;
+        height: 300%;
     }
     .weatherClass{
         left: 10%;
@@ -370,60 +370,60 @@ left: 250%;
        top:45%;
        left:90%;
        width: 60%;
-       font-size: 120%;
+       font-size: 160%;
     }
     .dayTime
     {
-        top:52%;
+        top:50%;
         left:90%;
         width: 60%;
-        font-size: 100%;
+        font-size: 120%;
     }
     .weatherStatus
     {
-        top:58%;
+        top:56%;
         left:90%;
         width: 60%;
-        font-size: 100%;
+        font-size: 120%;
     }
     .todayWeather
 {
-  top:61%;
+  top:58%;
   left:130%;
-  width: 8%;
+  width: 10%;
   height: 6%;
 
 }
     .tempCount
 {
-  top:60%;
+  top:58%;
   left:90%;
   font-weight: bolder;
   font-size: 260%;
 }
 .celciusClass
 {
-  top:66%;
+  top:62%;
   left:106%;
   font-size: 100%;
   cursor:pointer;
 }
 .fahrenhiteClass
 {
-  top:66%;
+  top:62%;
   left:116%;
   font-size: 100%;
   cursor:pointer;
 }
 .divBar
 {
-  top:66%;
+  top:62%;
   left:113%;
   font-size: 100%;
 }
 .inputDiv
 {
-  top:90%;
+  top:70%;
   left:90%;
 }
 .inputHead
@@ -435,7 +435,7 @@ left: 250%;
 .textBox
 {
   height: 20px;
-  width:700%;
+  width:800%;
   border-radius: 3px;
   font-size: 16px;
   overflow: hidden;
