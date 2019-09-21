@@ -17,7 +17,7 @@ file description: CSS file of Weathrt Application
 {
     position: absolute;
     top:40%;
-    left:24%;
+    left:26%;
     font-style: normal;
     font-family: sans-serif;
     font-size: 300%;
@@ -27,7 +27,7 @@ file description: CSS file of Weathrt Application
 {
     position: absolute;
     top:40%;
-    left:50%;
+    left:48%;
     font-style: normal;
     font-family: sans-serif;
     font-size: 300%;
@@ -45,7 +45,7 @@ file description: CSS file of Weathrt Application
 .dayTime
 {
   position: absolute;
-  top:20%;
+  top:24%;
   left:57%;
   font-style: normal;
   font-family: sans-serif;
@@ -54,7 +54,7 @@ file description: CSS file of Weathrt Application
 .weatherStatus
 {
   position: absolute;
-  top:26%;
+  top:28%;
   left:57%;
   font-style: normal;
   font-family: sans-serif;
@@ -74,7 +74,7 @@ file description: CSS file of Weathrt Application
 {
   position: absolute;
   top:34%;
-  left:61%;
+  left:56%;
   font-style: normal;
   font-family: sans-serif;
   font-size: 100%;
@@ -84,7 +84,7 @@ file description: CSS file of Weathrt Application
 {
   position: absolute;
   top:34%;
-  left:64%;
+  left:60%;
   font-style: normal;
   font-family: sans-serif;
   font-size: 100%;
@@ -94,7 +94,7 @@ file description: CSS file of Weathrt Application
 {
   position: absolute;
   top:34%;
-  left:62%;
+  left:58%;
   font-style: normal;
   font-family: sans-serif;
   font-size: 100%;
@@ -115,12 +115,11 @@ file description: CSS file of Weathrt Application
 .textBox
 {
   position: absolute;
-  height: 20px;
+  height: 18px;
   width:383px;
-  border:none;
   border-radius: 3px;
   background: white;
-  font-size: 16px;
+  font-size: 12px;
   overflow: hidden;
 }
 .suggestVal
@@ -164,16 +163,16 @@ left: 250%;
     height: 100%;
     }
     .weatherClass{
-        left: 20%;
+        left: 22%;
         font-size: 300%;
     }
     .appClass{
-        left: 60%;
+        left: 58%;
         font-size: 300%;
     }
-          .cityName
+    .cityName
     {
-       top:18%;
+       top:16%;
        left:60%;
        width: 60%;
        font-size: 180%;
@@ -194,7 +193,7 @@ left: 250%;
     }
     .todayWeather
 {
-  top:32%;
+  top:34%;
   left:80%;
   width: 4%;
   height: 5%;
@@ -210,21 +209,21 @@ left: 250%;
 .celciusClass
 {
   top:36%;
-  left:68%;
+  left:64%;
   font-size: 100%;
   cursor:pointer;
 }
 .fahrenhiteClass
 {
   top:36%;
-  left:73%;
+  left:68%;
   font-size: 100%;
   cursor:pointer;
 }
 .divBar
 {
   top:36%;
-  left:71%;
+  left:66%;
   font-size: 100%;
 }
 .inputDiv
