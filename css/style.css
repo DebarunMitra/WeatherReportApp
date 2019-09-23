@@ -115,9 +115,9 @@ file description: CSS file of Weathrt Application
 .textBox
 {
   position: absolute;
-  height: 18px;
+  height: 16px;
   width:383px;
-  border-radius: 3px;
+  border-radius: 0px;
   background: white;
   font-size: 12px;
   overflow: hidden;
@@ -146,7 +146,7 @@ file description: CSS file of Weathrt Application
 {
   position: absolute;
   top:27%;
-  left:58%;
+  left:68%;
   width: 5%;
   height: 8%;
 
@@ -194,7 +194,7 @@ left: 250%;
     .todayWeather
 {
   top:32%;
-  left:68%;
+  left:75%;
   width: 5%;
   height: 8%;
 
@@ -239,10 +239,10 @@ left: 250%;
 }
 .textBox
 {
-  height: 18px;
+  height: 16px;
   width:350%;
-  border-radius: 1px;
-  font-size: 13px;
+  border-radius: 0px;
+  font-size: 12px;
   overflow: hidden;
 }
 .suggestVal
