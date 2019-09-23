@@ -157,7 +157,7 @@ position: absolute;
 top:0%;
 left: 250%;
 }
-@media only screen and (max-width:1400px) {
+@media only screen and (max-width:1600px) {
     .colorPart{
          width: 50%;
     height: 100%;
