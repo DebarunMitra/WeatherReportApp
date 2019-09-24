@@ -4,6 +4,10 @@ application name:Weather Report application
 objective: Update the user with current weather according to there location
 file description: CSS file of Weathrt Application
 */
+body{
+	max-width:1300px;
+	max-height:720px;
+}
 .colorPart
 {
     position: absolute;
