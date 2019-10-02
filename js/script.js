@@ -22,7 +22,8 @@ class Weather
     time=days[day]+", "+h1+":"+min+" "+ampm;
     return time;
   }
-  getTempCel=function(){
+}
+Weather.prototype.getTempCel=function(){
 let valueC=document.getElementById('cel').innerHTML;
  let ipChecker=document.getElementById('inputChecker').value;
   let intValCh=parseInt(ipChecker);
@@ -36,7 +37,7 @@ let valueC=document.getElementById('cel').innerHTML;
     document.getElementById('inputChecker').value=1;
   }
 }
-getTempFahr=function(){
+Weather.prototype.getTempFahr=function(){
 let valueF=document.getElementById('fahr').innerHTML;
  let ipChecker=document.getElementById('inputChecker').value;
   let intValCh=parseInt(ipChecker);
@@ -49,7 +50,6 @@ let valueF=document.getElementById('fahr').innerHTML;
       document.getElementById('fahr').style.color='#1E90FF';
       document.getElementById('inputChecker').value=2;
     }
-   }
 }
 Weather.prototype.getCityState=function(){
   const searchInput=document.getElementById('inputSearch');
@@ -58,9 +58,25 @@ Weather.prototype.getCityState=function(){
   const value=searchInput.value;
   suggVal.innerHTML='';
  const suggestValue=city.filter((cities)=>
-  cities.name.toLowerCase().startsWith(value)
+     cities.name.toLowerCase().startsWith(value)
  );
-    return suggestValue;
+ suggestValue.forEach(function(suggested){
+   const div=document.createElement('div');
+   div.innerHTML=suggested.name+", "+suggested.state;
+   div.addEventListener('click',function(){
+     searchInput.value=suggested.name+", "+suggested.state;
+     document.getElementById('cityName').innerHTML=suggested.name+", "+suggested.state;
+     document.getElementById('temp').innerHTML=suggested.temp;
+     document.getElementById('weatherImg').src=suggested.weather;
+     document.getElementById('cel').style.color='#1E90FF';
+     document.getElementById('fahr').style.color='#000000';
+     document.getElementById('inputChecker').value=1;
+     document.getElementById('report').innerHTML=suggested.report;
+     suggVal.innerHTML='';
+   });
+   suggVal.appendChild(div);
+});
+(value=='')?suggVal.innerHTML='':false;
 }
 const city=[
   {name:'Kolkata',state:'West Bengal',temp:30,weather:'./images/thunderStorm.png',report:'Thunder Storm'},
@@ -97,30 +113,9 @@ document.getElementById('dayTime').innerHTML=weatherObj.getDayTime(dayTime);
 /*initial data stop*/
 /*temperature convert start*/
 document.getElementById('cel').addEventListener('click',weatherObj.getTempCel, false);
-document.getElementById('fahr').addEventListener('click',function(){weatherObj.getTempFahr()}, false);
+document.getElementById('fahr').addEventListener('click',weatherObj.getTempFahr, false);
 /*temperature convert stop*/
 /*autocomplete start*/
 const searchInput=document.getElementById('inputSearch');
-searchInput.addEventListener('keyup',function (){
-    const suggVal=document.getElementById('suggestedVal');
-    const value=searchInput.value;
-    let typeVal=weatherObj.getCityState();
-    typeVal.forEach(function(suggested){
-    const div=document.createElement('div');
-    div.innerHTML=suggested.name+", "+suggested.state;
-    div.addEventListener('click',function(){
-     searchInput.value=suggested.name+", "+suggested.state;
-     document.getElementById('cityName').innerHTML=suggested.name+", "+suggested.state;
-     document.getElementById('temp').innerHTML=suggested.temp;
-     document.getElementById('weatherImg').src=suggested.weather;
-     document.getElementById('cel').style.color='#1E90FF';
-     document.getElementById('fahr').style.color='#000000';
-     document.getElementById('inputChecker').value=1;
-     document.getElementById('report').innerHTML=suggested.report;
-     suggVal.innerHTML='';
-   });
-   suggVal.appendChild(div);
-});
-(value=='')?suggVal.innerHTML='':false;
-},false);
+searchInput.addEventListener('keyup',weatherObj.getCityState,false);
 /*autocomplete end*/
