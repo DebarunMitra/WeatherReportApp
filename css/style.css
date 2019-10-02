@@ -45,6 +45,10 @@ file description: CSS file of Weathrt Application
   font-family: sans-serif;
   font-size: 100%;
 }
+.ws-icon{
+  display: flex;
+  flex-direction: row;
+}
 .weatherStatus
 {
   margin-left: 56%;
@@ -53,17 +57,26 @@ file description: CSS file of Weathrt Application
   font-family: sans-serif;
   font-size: 100%;
 }
+.weather-icon{
+  margin-left:20px;
+  margin-top: -25px;
+  width:50px;
+  height: 50px;
+}
+.temp-canf{
+  margin-top: -20px;
+}
 .tempCount
 {
   font-style: normal;
   margin-left: 56%;
-  margin-top: 10%;
+  margin-top: 0%;
   font-family: sans-serif;
   font-weight: bolder;
   font-size: 260%;
 }
 .cbf-pos{
-  margin-left: 60%;
+  margin-left: 61%;
   margin-top: -60px;
 }
 .celciusClass
@@ -91,7 +104,7 @@ file description: CSS file of Weathrt Application
 .inputDiv
 {
   margin-left: 56%;
-  margin-top: 5%;
+  margin-top: 3%;
 }
 .inputHead
 {
@@ -126,4 +139,11 @@ file description: CSS file of Weathrt Application
 .suggestVal > div:hover
 {
   background-color: #1E90FF;
+}
+.error-msg{
+  margin-left: 56%;
+  margin-top: 0%;
+}
+.error-msg p{
+color: red;
 }

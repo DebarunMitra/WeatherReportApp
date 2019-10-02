@@ -6,6 +6,9 @@ file description: JavaScript file of Weathrt Application
 */
 class Weather
 {
+  constructor(key){
+    this.key=key;
+  }
   getDayTime(date)
   {
     let h=date.getHours();
@@ -21,6 +24,48 @@ class Weather
     (h1<10)?h1="0"+h1:h1=h1;
     time=days[day]+", "+h1+":"+min+" "+ampm;
     return time;
+  }
+  suggestCity(){
+
+// console.log('suggestCity');
+//     let cityData=fetch("cityList.json").then(response => response.json()).then(json =>Promise.resolve(json));
+//     console.log(cityData);
+//      let resD=cityData.then(value=>value.name);
+//      console.log(resD);
+//       const searchInput=document.getElementById('inputSearch');
+//       const suggVal=document.getElementById('suggestedVal');
+//       const cityAndState=document.getElementById('cityNname');
+//       const value=searchInput.value;
+//       suggVal.innerHTML='';
+      // const suggestValue=cityData.map((cities)=>cities.name.toLowerCase().startsWith(value));
+      // console.log(suggestValue);
+    //   suggestValue.forEach(function(suggested){
+    //     const div=document.createElement('div');
+    //     div.innerHTML=suggested.name;
+    // });
+}
+  getWeather(cid){
+    this.cid=cid;
+    console.log(this.key);
+    fetch('https://api.openweathermap.org/data/2.5/weather?q='+this.cid+'&appid='+this.key+'')
+    .then(res=>res.json())
+    .then(data=>{
+      let currTime=new Date();
+      document.getElementById('errmsg').innerHTML=' ';
+      document.getElementById('cityName').innerHTML=data['name']+", "+data.sys.country;
+      document.getElementById('dayTime').innerHTML=weatherObj.getDayTime(dayTime);
+      document.getElementById('temp').innerHTML=(data.main.temp-273.15).toFixed(0);
+      document.getElementById('inputChecker').value=1;
+      document.getElementById('report').innerHTML=data.weather[0].main+', '+data.weather[0].description;
+      document.getElementById('wicon').src='http://openweathermap.org/img/wn/'+data.weather[0].icon+'@2x.png';
+      document.getElementById('dayTime').innerHTML=this.getDayTime(currTime);
+      document.getElementById('cel').style.color='#1E90FF';
+      document.getElementById('fahr').style.color='#000000';
+    })
+    .catch(err=>{
+      console.log('Please Enter Proper City Name');
+      document.getElementById('errmsg').innerHTML='404 Error! City not found :(';
+    })
   }
 }
 Weather.prototype.getTempCel=function(){
@@ -62,24 +107,18 @@ Weather.prototype.getCityState=function(){
  );
  suggestValue.forEach(function(suggested){
    const div=document.createElement('div');
-   div.innerHTML=suggested.name+", "+suggested.state;
+   div.innerHTML=suggested.name;
    div.addEventListener('click',function(){
-     searchInput.value=suggested.name+", "+suggested.state;
-     document.getElementById('cityName').innerHTML=suggested.name+", "+suggested.state;
-     document.getElementById('temp').innerHTML=suggested.temp;
-     document.getElementById('weatherImg').src=suggested.weather;
-     document.getElementById('cel').style.color='#1E90FF';
-     document.getElementById('fahr').style.color='#000000';
-     document.getElementById('inputChecker').value=1;
-     document.getElementById('report').innerHTML=suggested.report;
-     suggVal.innerHTML='';
-   });
+   searchInput.value=suggested.name;
+   suggVal.innerHTML='';
+   searchInput.innerHTML='';
+  });
    suggVal.appendChild(div);
 });
 (value=='')?suggVal.innerHTML='':false;
 }
 const city=[
-  {name:'Kolkata',state:'West Bengal',temp:30,weather:'./images/thunderStorm.png',report:'Thunder Storm'},
+  {name:'Kolkata',state:'West Bengal',temp:30,weather:'./images/rain.png',report:'Sunny Cloudy'},
   {name:'Bengaluru',state:'Karnataka',temp:22,weather:'./images/clouds.png',report:'Partly Cloudy'},
   {name:'Hyderabad',state:'Andhra Pradesh',temp:25,weather:'./images/cloudsLeter.png',report:'Dark Cloudy'},
   {name:'Itanagar',state:'Arunachal Pradesh',temp:20,weather:'./images/storm.png',report:'Heavy Storm'},
@@ -102,7 +141,8 @@ const city=[
   {name:'Coimbatore',state:'Tamil Nadu',temp:25,weather:'./images/sunnyCloudy.png',report:'Sunny Cloudy'}
 ];
 let dayTime=new Date();
-const weatherObj=new Weather();
+let apikey='47a28cd3e8d67eaf08352518a5ebdd02';
+const weatherObj=new Weather(apikey);
 /*initial data start*/
 document.getElementById('cityName').innerHTML=city[0].name+", "+city[0].state;
 document.getElementById('dayTime').innerHTML="Wednesday, 1:00PM";
@@ -111,6 +151,11 @@ document.getElementById('inputChecker').value=1;
 document.getElementById('report').innerHTML=city[0].report;
 document.getElementById('dayTime').innerHTML=weatherObj.getDayTime(dayTime);
 /*initial data stop*/
+document.getElementById('btnSearch').addEventListener('click',function(){
+  let inpVal=document.getElementById('inputSearch').value;
+  console.log(inpVal);
+  weatherObj.getWeather(inpVal);
+},false);
 /*temperature convert start*/
 document.getElementById('cel').addEventListener('click',weatherObj.getTempCel, false);
 document.getElementById('fahr').addEventListener('click',weatherObj.getTempFahr, false);

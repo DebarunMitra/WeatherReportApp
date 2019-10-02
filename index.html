@@ -24,18 +24,23 @@ file description: HTML file of Weathrt Application
   <div class="contentArea">
     <p id="cityName" class="cityName"></p>
     <p id="dayTime" class="dayTime"></p>
-    <div class="">
-      <p id="report" class="weatherStatus"></p><i class="ws-icon"></i>
+    <div class="ws-icon">
+      <p id="report" class="weatherStatus"></p>
+      <img id="wicon" class="weather-icon" src="http://openweathermap.org/img/wn/10d@2x.png" alt="weatherIcon">
     </div>
   </div>
-  <div>
+  <div class="temp-canf">
       <p><span id="temp" class="tempCount"></span></p>
-      <p class="cbf-pos"><b><span id="cel" class="celciusClass" style="color:#1E90FF;">℃</span><span  class="divBar">&nbsp;|&nbsp;</span><span id="fahr" class="fahrenhiteClass" style="color:#000000;">℉</span></b></p>
+      <p class="cbf-pos"><b><span id="cel" class="celciusClass" style="color:#1E90FF;">℃</span>
+        <span  class="divBar">&nbsp;|&nbsp;</span><span id="fahr" class="fahrenhiteClass" style="color:#000000;">℉</span></b></p>
+  </div>
+  <div class="error-msg">
+      <p id="errmsg"></p>
   </div>
   <div class="inputDiv">
     <p class="inputHead"><b>Enter Your City</b></p>
-    <input type="text" id="inputSearch" class="textBox" name="text" value="" placeholder="City, State">
-    <input type="button" class="search-btn" value="Search">
+    <input type="text" id="inputSearch" class="textBox" name="text" value="" placeholder="City Name">
+    <input type="button" id="btnSearch" class="search-btn" value="Search">
     <input type="hidden" id="inputChecker" class="endBox">
     <div id="suggestedVal" class="suggestVal">
     </div>
@@ -44,4 +49,5 @@ file description: HTML file of Weathrt Application
     <!--main weather div stop-->
   </body>
     <script src="js/script.js"></script>
+        <!--script src="js/city.js"></script-->
 </html>
