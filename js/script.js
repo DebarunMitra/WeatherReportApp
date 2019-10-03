@@ -25,28 +25,8 @@ class Weather
     time=days[day]+", "+h1+":"+min+" "+ampm;
     return time;
   }
-  suggestCity(){
-
-// console.log('suggestCity');
-//     let cityData=fetch("cityList.json").then(response => response.json()).then(json =>Promise.resolve(json));
-//     console.log(cityData);
-//      let resD=cityData.then(value=>value.name);
-//      console.log(resD);
-//       const searchInput=document.getElementById('inputSearch');
-//       const suggVal=document.getElementById('suggestedVal');
-//       const cityAndState=document.getElementById('cityNname');
-//       const value=searchInput.value;
-//       suggVal.innerHTML='';
-      // const suggestValue=cityData.map((cities)=>cities.name.toLowerCase().startsWith(value));
-      // console.log(suggestValue);
-    //   suggestValue.forEach(function(suggested){
-    //     const div=document.createElement('div');
-    //     div.innerHTML=suggested.name;
-    // });
-}
   getWeather(cid){
     this.cid=cid;
-    console.log(this.key);
     fetch('https://api.openweathermap.org/data/2.5/weather?q='+this.cid+'&appid='+this.key+'')
     .then(res=>res.json())
     .then(data=>{
@@ -59,7 +39,7 @@ class Weather
       document.getElementById('report').innerHTML=data.weather[0].main+', '+data.weather[0].description;
       document.getElementById('wicon').src='http://openweathermap.org/img/wn/'+data.weather[0].icon+'@2x.png';
       document.getElementById('dayTime').innerHTML=this.getDayTime(currTime);
-      document.getElementById('cel').style.color='#1E90FF';
+      document.getElementById('cel').style.color='#ff662e';
       document.getElementById('fahr').style.color='#000000';
     })
     .catch(err=>{
@@ -77,7 +57,7 @@ let valueC=document.getElementById('cel').innerHTML;
   {
     let num=(5*(temp-32))/9;
     document.getElementById('temp').innerHTML=num.toFixed(0);
-    document.getElementById('cel').style.color='#1E90FF';
+    document.getElementById('cel').style.color='#ff662e';
     document.getElementById('fahr').style.color='#000000';
     document.getElementById('inputChecker').value=1;
   }
@@ -92,7 +72,7 @@ let valueF=document.getElementById('fahr').innerHTML;
     let num=((temp*9)/5)+32;
       document.getElementById('temp').innerHTML=num.toFixed(0);
       document.getElementById('cel').style.color='#000000';
-      document.getElementById('fahr').style.color='#1E90FF';
+      document.getElementById('fahr').style.color='#ff662e';
       document.getElementById('inputChecker').value=2;
     }
 }
@@ -110,8 +90,8 @@ Weather.prototype.getCityState=function(){
    div.innerHTML=suggested.name;
    div.addEventListener('click',function(){
    searchInput.value=suggested.name;
-   suggVal.innerHTML='';
-   searchInput.innerHTML='';
+   suggVal.innerHTML=' ';
+   searchInput.innerHTML=' ';
   });
    suggVal.appendChild(div);
 });
@@ -151,9 +131,8 @@ document.getElementById('inputChecker').value=1;
 document.getElementById('report').innerHTML=city[0].report;
 document.getElementById('dayTime').innerHTML=weatherObj.getDayTime(dayTime);
 /*initial data stop*/
-document.getElementById('btnSearch').addEventListener('click',function(){
+document.getElementById('btnSearch').addEventListener('click',()=>{
   let inpVal=document.getElementById('inputSearch').value;
-  console.log(inpVal);
   weatherObj.getWeather(inpVal);
 },false);
 /*temperature convert start*/
