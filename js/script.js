@@ -25,6 +25,33 @@ class Weather
     time=days[day]+", "+h1+":"+min+" "+ampm;
     return time;
   }
+  suggestCity(){
+    const searchInput=document.getElementById('inputSearch');
+    const suggVal=document.getElementById('suggestedVal');
+    const cityAndState=document.getElementById('cityNname');
+    const valCity=searchInput.value;
+    suggVal.innerHTML=' ';
+    if(valCity)
+    {
+      let cityData=fetch("cityList.json").then(response => response.json()).then(json =>Promise.resolve(json)).then(value=>{
+      suggVal.innerHTML=' ';
+        let nameCity=value.filter((item)=>item.name.toLowerCase().startsWith(valCity)).slice(0, 5).map((item)=>item);
+          nameCity.map((item) => {
+            const div=document.createElement('div');
+             div.innerHTML=item.name+', '+item.country;
+             div.addEventListener('click',function(){
+             searchInput.value=item.name;
+             suggVal.innerHTML=' ';
+             searchInput.innerHTML=' ';
+           });
+           suggVal.appendChild(div);
+         });
+         (value===' ')?suggVal.innerHTML=' ':false;
+       }).catch((err) => {
+         console.log('Error: '+err);
+       });
+     }
+}
   getWeather(cid){
     this.cid=cid;
     fetch('https://api.openweathermap.org/data/2.5/weather?q='+this.cid+'&appid='+this.key+'')
@@ -76,27 +103,6 @@ let valueF=document.getElementById('fahr').innerHTML;
       document.getElementById('inputChecker').value=2;
     }
 }
-Weather.prototype.getCityState=function(){
-  const searchInput=document.getElementById('inputSearch');
-  const suggVal=document.getElementById('suggestedVal');
-  const cityAndState=document.getElementById('cityNname');
-  const value=searchInput.value;
-  suggVal.innerHTML='';
- const suggestValue=city.filter((cities)=>
-     cities.name.toLowerCase().startsWith(value)
- );
- suggestValue.forEach(function(suggested){
-   const div=document.createElement('div');
-   div.innerHTML=suggested.name;
-   div.addEventListener('click',function(){
-   searchInput.value=suggested.name;
-   suggVal.innerHTML=' ';
-   searchInput.innerHTML=' ';
-  });
-   suggVal.appendChild(div);
-});
-(value=='')?suggVal.innerHTML='':false;
-}
 const city=[
   {name:'Kolkata',state:'West Bengal',temp:30,weather:'./images/rain.png',report:'Sunny Cloudy'},
   {name:'Bengaluru',state:'Karnataka',temp:22,weather:'./images/clouds.png',report:'Partly Cloudy'},
@@ -141,5 +147,5 @@ document.getElementById('fahr').addEventListener('click',weatherObj.getTempFahr,
 /*temperature convert stop*/
 /*autocomplete start*/
 const searchInput=document.getElementById('inputSearch');
-searchInput.addEventListener('keyup',weatherObj.getCityState,false);
+searchInput.addEventListener('keyup',weatherObj.suggestCity,false);
 /*autocomplete end*/
