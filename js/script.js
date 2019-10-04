@@ -64,7 +64,7 @@ class Weather
       document.getElementById('temp').innerHTML=(data.main.temp-273.15).toFixed(0);
       document.getElementById('inputChecker').value=1;
       document.getElementById('report').innerHTML=data.weather[0].main+', '+data.weather[0].description;
-      document.getElementById('wicon').src='http://openweathermap.org/img/wn/'+data.weather[0].icon+'@2x.png';
+      document.getElementById('wicon').src='https://openweathermap.org/img/wn/'+data.weather[0].icon+'@2x.png';
       document.getElementById('dayTime').innerHTML=this.getDayTime(currTime);
       document.getElementById('cel').style.color='#ff662e';
       document.getElementById('fahr').style.color='#000000';
