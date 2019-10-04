@@ -30,7 +30,6 @@ class Weather
     const suggVal=document.getElementById('suggestedVal');
     const cityAndState=document.getElementById('cityNname');
     const valCity=searchInput.value;
-    console.log(valCity);
     suggVal.innerHTML=' ';
     if(valCity)
     {
@@ -39,7 +38,6 @@ class Weather
         let nameCity=value.filter((item)=>item.name.toLowerCase().startsWith(valCity)).slice(0, 5).map((item)=>item);
           nameCity.map((item) => {
             const div=document.createElement('div');
-            console.log(item.name+', '+item.country);
              div.innerHTML=item.name+', '+item.country;
              div.addEventListener('click',function(){
              searchInput.value=item.name;
