@@ -147,5 +147,5 @@ document.getElementById('fahr').addEventListener('click',weatherObj.getTempFahr,
 /*temperature convert stop*/
 /*autocomplete start*/
 const searchInput=document.getElementById('inputSearch');
-searchInput.addEventListener('keyup input',weatherObj.suggestCity,false);
+searchInput.addEventListener('keyup',weatherObj.suggestCity,false);
 /*autocomplete end*/
